@@ -1,12 +1,16 @@
 import speech_recognition as sr
 from time import ctime
+import webbrowser
 
 # Create an object
 r = sr.Recognizer()
 
-def record_speech():
+def record_speech(question = ""):
     # Use microphone as speech source
     with sr.Microphone() as source:
+        if question:
+            print(question)
+
         speech = r.listen(source)
         speech_text = ""
 
@@ -24,6 +28,14 @@ def record_speech():
 def respond_to_speech(speech_text):
     if "what time is it" in speech_text:
         print(ctime())
+    
+    if "find location" in speech_text:
+        location = record_speech("What is the location?")
+
+        url = "https://google.com/maps/place/" + location + "/&amp;"
+        webbrowser.get().open(url)
+
+        print("The location " + location + " has been found.")
 
 
 print("Tell Me What You Would Like To Do And I Will Do It For You.\n")
