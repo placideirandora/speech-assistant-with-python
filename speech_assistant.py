@@ -7,6 +7,7 @@ from speak import speak
 r = sr.Recognizer()
 
 
+# Function for recording the speech as well as converting it into text
 def record_speech(question=""):
     # Use microphone as speech source
     with sr.Microphone() as source:
@@ -26,6 +27,8 @@ def record_speech(question=""):
 
         return speech_text
 
+
+# Function for responding to predicted questions
 def respond_to_speech(speech_text):
     if "what time is it" in speech_text:
         speak("Oh My Goodness! This Is What You Have Just Asked For:\n")

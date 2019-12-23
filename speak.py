@@ -3,6 +3,7 @@ import random
 from gtts import gTTS
 import playsound
 
+# Function for converting text speech into audio speech as well as playing it
 def speak(speech_text):
     tts = gTTS(speech_text, lang="en")
     
