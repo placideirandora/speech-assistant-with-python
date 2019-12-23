@@ -1,10 +1,7 @@
-import os
 import time
-import random
-import playsound
 import webbrowser
-from gtts import gTTS
 import speech_recognition as sr
+from speak import speak
 
 # Create an object
 r = sr.Recognizer()
@@ -28,20 +25,6 @@ def record_speech(question=""):
                 "Sorry, I Could Not Connect To The Internet. Resolve The Issue And Come Back.")
 
         return speech_text
-
-
-def speak(speech_text):
-    tts = gTTS(speech_text, lang="en")
-    
-    random_number = random.randint(1, 1000)
-    audio_file = "speech-" + str(random_number) + ".mp3"
-    
-    tts.save(audio_file)
-    playsound.playsound(audio_file)
-    
-    print(speech_text)
-    os.remove(audio_file)
-
 
 def respond_to_speech(speech_text):
     if "what time is it" in speech_text:
