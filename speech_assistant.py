@@ -5,10 +5,12 @@ r = sr.Recognizer()
 
 # Use microphone as speech source
 with sr.Microphone() as source:
-    print("What's on your mind?")
-    
+    print("Tell me what you want and I write it for you.\n")
     speech = r.listen(source)
-    speech_text = r.recognize_google(speech)
 
-    print(speech_text)
-
+    try:
+        speech_text = r.recognize_google(speech)
+        print("This is what you have said:\n")
+        print(speech_text)
+    except sr.UnknownValueError:
+        print("I could not understand what you said.\n")
