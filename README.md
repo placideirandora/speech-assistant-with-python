@@ -17,3 +17,15 @@ $ Open the extensions tab, find and install the Python extension by Microsoft.
 ```
 $ Extension name: Python.
 ```
+
+### Start The App
+
+```
+$ Run the following command in the VSCODE terminal: python3 speech_assistant.py 
+```
+
+### Ask/Propose The Following 
+
+- What time is it? - To find out the current time
+- Find location - To find a specific location with Google Maps
+- Exit - To terminate the app
