@@ -1,7 +1,7 @@
 import time
 import webbrowser
 import speech_recognition as sr
-from speak import speak
+from text_to_speech import speak
 
 # Create an object
 r = sr.Recognizer()
