@@ -6,7 +6,7 @@ A console application that automates activities by telling it what to do.
 ### Clone The Project
 
 ```
-$ git clone https://github.com/placideirandora/speech-assistant-with-python
+$ git clone https://github.com/placiderapson/speech-assistant-with-python
 ```
 
 ### Install Python VSCode Extension 
